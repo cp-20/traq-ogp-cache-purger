@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>traQ の OGP キャッシュ消す君</title>
-	<description>traQ の OGP キャッシュを消します。それだけ</description>
+	<meta name="description" content="traQ の OGP キャッシュを消します。それだけ" />
 </svelte:head>
 
 <div class="space-y-8">
