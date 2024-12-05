@@ -1,4 +1,4 @@
-import { env } from "$env/dynamic/public";
+import { PUBLIC_TRAQ_AUTH_CLIENT_ID } from "$env/static/public";
 import { sha256 } from "js-sha256";
 
 const baseUrl = "https://q.trap.jp/api/v3/oauth2";
@@ -6,7 +6,7 @@ const baseUrl = "https://q.trap.jp/api/v3/oauth2";
 const codeVerifierKey = (state: string) => `traq-auth-code-verifier-${state}`;
 export const tokenKey = "traq-auth-token";
 
-const clientId = env.PUBLIC_TRAQ_AUTH_CLIENT_ID;
+const clientId = PUBLIC_TRAQ_AUTH_CLIENT_ID;
 if (!clientId) throw new Error("TRAQ_AUTH_CLIENT_ID is not set");
 
 const randomString = (len: number) => {
